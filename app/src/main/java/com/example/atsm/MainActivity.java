@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+
 import com.example.atsm.ui.login.LoginActivity;
 
  public class MainActivity extends AppCompatActivity {
@@ -22,7 +23,7 @@ import com.example.atsm.ui.login.LoginActivity;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Toolbar myToolbar = (Toolbar) findViewById(R.id.topbar);
+        //Toolbar myToolbar = (Toolbar) findViewById(R.id.mainToolbar);
         //setSupportActionBar(myToolbar);
     }
 }
