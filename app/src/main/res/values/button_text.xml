@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="btn_txt_self_brief">Self-briefing</string>
+    <string name="btn_txt_atis">ATIS</string>
+    <string name="btn_txt_awos">AWOS</string>
+    <string name="btn_txt_charts">Aviation Charts</string>
+    <string name="btn_txt_gamet">GAMET</string>
+    <string name="btn_txt_lightning">Lightnings</string>
+    <string name="btn_txt_opmet">OPMET</string>
+    <string name="btn_txt_radar">Weather Radar</string>
+    <string name="btn_txt_satellite">Satellite</string>
+    <string name="btn_txt_schedule">Schedule</string>
+</resources>
