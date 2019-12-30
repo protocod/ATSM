@@ -10,88 +10,99 @@
     android:layout_centerVertical="false"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btn_self_briefing"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mainToolbar"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_weight="1"
-        android:text="@string/btn_txt_self_brief"
-        android:textAllCaps="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-    <Button
-        android:id="@+id/btn_atis"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_weight="1"
-        android:text="@string/btn_txt_atis"
-        app:layout_constraintTop_toBottomOf="@+id/btn_self_briefing" />
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainToolbar">
 
-    <Button
-        android:id="@+id/btn_awos"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_weight="1"
-        android:text="@string/btn_txt_awos"
-        app:layout_constraintTop_toBottomOf="@+id/btn_atis" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:scrollbarAlwaysDrawVerticalTrack="true">
 
-    <Button
-        android:id="@+id/btn_charts"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_weight="1"
-        android:text="@string/btn_txt_charts"
-        android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@+id/btn_awos" />
+            <Button
+                android:id="@+id/btn_satellite"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:text="@string/btn_txt_satellite" />
 
-    <Button
-        android:id="@+id/btn_gamet"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_weight="1"
-        android:text="@string/btn_txt_gamet"
-        app:layout_constraintTop_toBottomOf="@+id/btn_charts" />
+            <Button
+                android:id="@+id/btn_awos"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:text="@string/btn_txt_awos" />
 
-    <Button
-        android:id="@+id/btn_lightnings"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_weight="1"
-        android:text="@string/btn_txt_lightning"
-        app:layout_constraintTop_toBottomOf="@+id/btn_gamet" />
+            <Button
+                android:id="@+id/btn_self_briefing"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:text="@string/btn_txt_self_brief"
+                android:textAllCaps="true" />
 
-    <Button
-        android:id="@+id/btn_opmet"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_weight="1"
-        android:text="@string/btn_txt_opmet"
-        app:layout_constraintTop_toBottomOf="@+id/btn_lightnings" />
+            <Button
+                android:id="@+id/btn_gamet"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:text="@string/btn_txt_gamet" />
 
-    <Button
-        android:id="@+id/btn_radar"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_weight="1"
-        android:text="@string/btn_txt_radar"
-        app:layout_constraintTop_toBottomOf="@+id/btn_opmet" />
+            <Button
+                android:id="@+id/btn_lightnings"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:text="@string/btn_txt_lightning" />
 
-    <Button
-        android:id="@+id/btn_satellite"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_weight="1"
-        android:text="@string/btn_txt_satellite"
-        app:layout_constraintTop_toBottomOf="@+id/btn_radar" />
+            <Button
+                android:id="@+id/btn_schedule"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:text="@string/btn_txt_schedule" />
 
-    <Button
-        android:id="@+id/btn_schedule"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_weight="1"
-        android:text="@string/btn_txt_schedule"
-        app:layout_constraintTop_toBottomOf="@+id/btn_satellite" />
+            <Button
+                android:id="@+id/btn_radar"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:text="@string/btn_txt_radar" />
+
+            <Button
+                android:id="@+id/btn_opmet"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:text="@string/btn_txt_opmet" />
+
+            <Button
+                android:id="@+id/btn_charts"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:text="@string/btn_txt_charts"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btn_atis"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:text="@string/btn_txt_atis" />
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
