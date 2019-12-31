@@ -32,21 +32,21 @@
             android:scrollbarAlwaysDrawVerticalTrack="true">
 
             <Button
-                android:id="@+id/btn_satellite"
+                android:id="@+id/satelliteBtn"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_weight="1"
                 android:text="@string/btn_txt_satellite" />
 
             <Button
-                android:id="@+id/btn_awos"
+                android:id="@+id/awosBtn"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_weight="1"
                 android:text="@string/btn_txt_awos" />
 
             <Button
-                android:id="@+id/btn_self_briefing"
+                android:id="@+id/selfbriefingBtn"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_weight="1"
@@ -54,42 +54,42 @@
                 android:textAllCaps="true" />
 
             <Button
-                android:id="@+id/btn_gamet"
+                android:id="@+id/gametBtn"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_weight="1"
                 android:text="@string/btn_txt_gamet" />
 
             <Button
-                android:id="@+id/btn_lightnings"
+                android:id="@+id/lightningsBtn"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_weight="1"
                 android:text="@string/btn_txt_lightning" />
 
             <Button
-                android:id="@+id/btn_schedule"
+                android:id="@+id/scheduleBtn"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_weight="1"
                 android:text="@string/btn_txt_schedule" />
 
             <Button
-                android:id="@+id/btn_radar"
+                android:id="@+id/radarBtn"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_weight="1"
                 android:text="@string/btn_txt_radar" />
 
             <Button
-                android:id="@+id/btn_opmet"
+                android:id="@+id/opmetBtn"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_weight="1"
                 android:text="@string/btn_txt_opmet" />
 
             <Button
-                android:id="@+id/btn_charts"
+                android:id="@+id/chartsBtn"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_weight="1"
@@ -97,7 +97,7 @@
                 android:textSize="14sp" />
 
             <Button
-                android:id="@+id/btn_atis"
+                android:id="@+id/atisBtn"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_weight="1"
