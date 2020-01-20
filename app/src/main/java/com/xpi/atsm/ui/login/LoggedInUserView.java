@@ -1,4 +1,4 @@
-package com.example.atsm.ui.login;
+package com.xpi.atsm.ui.login;
 
 /**
  * Class exposing authenticated user details to the UI.

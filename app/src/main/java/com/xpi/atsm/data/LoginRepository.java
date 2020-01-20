@@ -1,6 +1,9 @@
-package com.example.atsm.data;
+package com.xpi.atsm.data;
 
-import com.example.atsm.data.model.LoggedInUser;
+import android.content.Context;
+import android.content.SharedPreferences;
+
+import com.xpi.atsm.data.model.LoggedInUser;
 
 /**
  * Class that requests authentication and user information from the remote data source and

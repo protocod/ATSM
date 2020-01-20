@@ -1,4 +1,4 @@
-package com.example.atsm;
+package com.xpi.atsm;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.example.atsm", appContext.getPackageName());
+        assertEquals("com.xpi.atsm", appContext.getPackageName());
     }
 }

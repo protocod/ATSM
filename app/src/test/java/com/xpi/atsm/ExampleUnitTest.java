@@ -1,4 +1,4 @@
-package com.example.atsm;
+package com.xpi.atsm;
 
 import org.junit.Test;
 

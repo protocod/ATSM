@@ -1,10 +1,12 @@
-package com.example.atsm.ui.login;
+package com.xpi.atsm.ui.login;
 
 import android.app.Activity;
+import android.content.Intent;
 
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -22,7 +24,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.atsm.R;
+import com.xpi.atsm.MainActivity;
+import com.xpi.atsm.R;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -35,8 +38,8 @@ public class LoginActivity extends AppCompatActivity {
         loginViewModel = ViewModelProviders.of(this, new LoginViewModelFactory())
                 .get(LoginViewModel.class);
 
-        final EditText usernameEditText = findViewById(R.id.username_box);
-        final EditText passwordEditText = findViewById(R.id.password);
+        final EditText usernameEditText = findViewById(R.id.usernameBox);
+        final EditText passwordEditText = findViewById(R.id.passwordBox);
         final Button loginButton = findViewById(R.id.loginBtn);
         final ProgressBar loadingProgressBar = findViewById(R.id.loading);
 
@@ -66,13 +69,16 @@ public class LoginActivity extends AppCompatActivity {
                 if (loginResult.getError() != null) {
                     showLoginFailed(loginResult.getError());
                 }
-                if (loginResult.getSuccess() != null) {
-                    updateUiWithUser(loginResult.getSuccess());
-                }
-                setResult(Activity.RESULT_OK);
+                else {
 
-                //Complete and destroy login activity once successful
-                finish();
+                    if (loginResult.getSuccess() != null) {
+                        updateUiWithUser(loginResult.getSuccess());
+                    }
+                    setResult(Activity.RESULT_OK);
+
+                    //Complete and destroy login activity once successful
+                    finish();
+                }
             }
         });
 
@@ -89,8 +95,7 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                loginViewModel.loginDataChanged(usernameEditText.getText().toString(),
-                        passwordEditText.getText().toString());
+                loginViewModel.loginDataChanged(usernameEditText.getText().toString(), passwordEditText.getText().toString());
             }
         };
         usernameEditText.addTextChangedListener(afterTextChangedListener);
@@ -100,8 +105,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
-                    loginViewModel.login(usernameEditText.getText().toString(),
-                            passwordEditText.getText().toString());
+                    loginViewModel.login(usernameEditText.getText().toString(), passwordEditText.getText().toString());
                 }
                 return false;
             }
@@ -111,11 +115,12 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 loadingProgressBar.setVisibility(View.VISIBLE);
-                loginViewModel.login(usernameEditText.getText().toString(),
-                        passwordEditText.getText().toString());
+                loginViewModel.login(usernameEditText.getText().toString(), passwordEditText.getText().toString());
             }
         });
     }
+
+
 
     private void updateUiWithUser(LoggedInUserView model) {
         String welcome = getString(R.string.welcome) + model.getDisplayName();
